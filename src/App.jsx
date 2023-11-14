@@ -72,7 +72,7 @@ function App() {
                             isTooltipVisible ? "show" : "hide"
                         }`}
                     >
-                        <span className="tooltip">
+                        <div className="tooltip">
                             <div className="left">
                                 SHARE{" "}
                                 <FontAwesomeIcon icon={faSquareFacebook} />
@@ -91,7 +91,7 @@ function App() {
                                     <FontAwesomeIcon icon={faShare} />
                                 </div>
                             </div>
-                        </span>
+                        </div>
                     </div>
                 </CardWrapper>
             </div>
