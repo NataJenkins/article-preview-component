@@ -14,7 +14,10 @@ import "./_base.scss";
 
 function App() {
     const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-
+    const handleClickOutside = () => {
+        setIsTooltipVisible(false);
+    };
+    const ref = useOutsideClick(handleClickOutside);
     return (
         <main>
             <div className="container">
@@ -55,6 +58,7 @@ function App() {
                                 )}
 
                                 <div
+                                    ref={ref}
                                     className="share"
                                     onClick={() => setIsTooltipVisible(true)}
                                 >
