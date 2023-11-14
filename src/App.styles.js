@@ -11,7 +11,7 @@ const COLORS = {
 const CardWrapper = styled.div`
     max-width: 730px;
     width: 100%;
-
+    overflow: hidden;
     background-color: white;
     box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
     border-radius: 10px;
