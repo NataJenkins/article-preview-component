@@ -11,7 +11,7 @@ const COLORS = {
 const CardWrapper = styled.div`
     max-width: 730px;
     width: 100%;
-    overflow: hidden;
+
     background-color: white;
     box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
     border-radius: 10px;
@@ -26,6 +26,7 @@ const CardWrapper = styled.div`
         width: 60%;
         padding: 32px 40px;
         box-sizing: border-box;
+        border-radius: 0px 10px 10px 0px;
         .title {
             color: ${COLORS.very_dark_grayish_blue};
             font-size: 20px;
