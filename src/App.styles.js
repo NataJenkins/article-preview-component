@@ -126,7 +126,18 @@ const CardWrapper = styled.div`
             background-color: ${COLORS.very_dark_grayish_blue};
             color: ${COLORS.grayish_blue};
             margin-top: -66px;
-            transition: all 2s ease;
+            transition: all 0.3s ease;
+            &.hide {
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            .show {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.3s ease;
+            }
+
             path {
                 color: white;
             }

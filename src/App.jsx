@@ -66,30 +66,33 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    {isTooltipVisible && (
-                        <div className={`mobile-tooltip`}>
-                            <span className="tooltip">
-                                <div className="left">
-                                    SHARE{" "}
-                                    <FontAwesomeIcon icon={faSquareFacebook} />
-                                    <FontAwesomeIcon icon={faTwitter} />
-                                    <FontAwesomeIcon icon={faPinterest} />{" "}
+
+                    <div
+                        className={`mobile-tooltip ${
+                            isTooltipVisible ? "show" : "hide"
+                        }`}
+                    >
+                        <span className="tooltip">
+                            <div className="left">
+                                SHARE{" "}
+                                <FontAwesomeIcon icon={faSquareFacebook} />
+                                <FontAwesomeIcon icon={faTwitter} />
+                                <FontAwesomeIcon icon={faPinterest} />{" "}
+                            </div>
+                            <div className="right">
+                                <div
+                                    className="share"
+                                    onClick={() =>
+                                        setIsTooltipVisible(
+                                            !setIsTooltipVisible
+                                        )
+                                    }
+                                >
+                                    <FontAwesomeIcon icon={faShare} />
                                 </div>
-                                <div className="right">
-                                    <div
-                                        className="share"
-                                        onClick={() =>
-                                            setIsTooltipVisible(
-                                                !setIsTooltipVisible
-                                            )
-                                        }
-                                    >
-                                        <FontAwesomeIcon icon={faShare} />
-                                    </div>
-                                </div>
-                            </span>
-                        </div>
-                    )}
+                            </div>
+                        </span>
+                    </div>
                 </CardWrapper>
             </div>
         </main>
