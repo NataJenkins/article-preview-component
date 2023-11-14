@@ -180,8 +180,8 @@ const CardWrapper = styled.div`
             }
             .author {
                 .left {
+                    font-size: 13px;
                     .name {
-                        font-size: 13px;
                         font-weight: 700;
                     }
                     .date {
