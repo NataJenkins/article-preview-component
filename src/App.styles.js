@@ -87,12 +87,12 @@ const CardWrapper = styled.div`
                     padding: 18px 36px;
                     border-radius: 10px;
                     box-sizing: border-box;
-                    /* opacity: 0; */
-                    pointer-events: none;
+
                     color: white;
                     background-color: ${COLORS.very_dark_grayish_blue};
                     color: ${COLORS.grayish_blue};
                     width: 250px;
+
                     path {
                         color: white;
                     }
@@ -105,6 +105,80 @@ const CardWrapper = styled.div`
                         bottom: -3px;
                         left: 50%;
                         transform: translate(-50%) rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+    .mobile-tooltip {
+        display: none;
+    }
+    @media (max-width: 560px) {
+        flex-direction: column;
+        .content {
+            padding-bottom: 10px;
+        }
+        .mobile-tooltip {
+            z-index: 1;
+            display: block;
+            padding: 17px 40px;
+            border-radius: 0px 0px 10px 10px;
+            background-color: ${COLORS.very_dark_grayish_blue};
+            color: ${COLORS.grayish_blue};
+            margin-top: -66px;
+            transition: all 2s ease;
+            path {
+                color: white;
+            }
+            .tooltip {
+                display: flex;
+                justify-content: space-between;
+                .left {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        margin-left: 20px;
+                    }
+                }
+                .share {
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    background-color: ${COLORS.desaturated_dark_blue};
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+        .content {
+            width: 100%;
+            margin-top: 60%;
+            .title {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+            .description {
+                margin-bottom: 32px;
+            }
+            .author {
+                .left {
+                    .name {
+                        font-size: 13px;
+                        font-weight: 700;
+                    }
+                    .date {
+                        color: ${COLORS.grayish_blue};
+                    }
+                }
+                .right {
+                    .tooltip {
+                        display: none;
                     }
                 }
             }

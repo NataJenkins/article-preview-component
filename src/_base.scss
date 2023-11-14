@@ -18,4 +18,8 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+    @media (max-width: 760px) {
+        padding: 74px 24px;
+    }
 }

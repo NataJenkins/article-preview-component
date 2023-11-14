@@ -43,7 +43,7 @@ function App() {
                                     <p className="date">28 Jun 2020</p>
                                 </div>
                             </div>
-                            <div className="right">
+                            <div className="right" ref={ref}>
                                 {isTooltipVisible && (
                                     <span className="tooltip">
                                         SHARE{" "}
@@ -58,7 +58,6 @@ function App() {
                                 )}
 
                                 <div
-                                    ref={ref}
                                     className="share"
                                     onClick={() => setIsTooltipVisible(true)}
                                 >
@@ -67,6 +66,30 @@ function App() {
                             </div>
                         </div>
                     </div>
+                    {isTooltipVisible && (
+                        <div className={`mobile-tooltip`}>
+                            <span className="tooltip">
+                                <div className="left">
+                                    SHARE{" "}
+                                    <FontAwesomeIcon icon={faSquareFacebook} />
+                                    <FontAwesomeIcon icon={faTwitter} />
+                                    <FontAwesomeIcon icon={faPinterest} />{" "}
+                                </div>
+                                <div className="right">
+                                    <div
+                                        className="share"
+                                        onClick={() =>
+                                            setIsTooltipVisible(
+                                                !setIsTooltipVisible
+                                            )
+                                        }
+                                    >
+                                        <FontAwesomeIcon icon={faShare} />
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    )}
                 </CardWrapper>
             </div>
         </main>
