@@ -57,6 +57,7 @@ const CardWrapper = styled.div`
                 .name {
                     color: ${COLORS.very_dark_grayish_blue};
                     font-weight: 700;
+                    font-size: 13px;
                 }
                 .date {
                     color: ${COLORS.grayish_blue};
@@ -180,8 +181,8 @@ const CardWrapper = styled.div`
             }
             .author {
                 .left {
-                    font-size: 13px;
                     .name {
+                        font-size: 13px;
                         font-weight: 700;
                     }
                     .date {
